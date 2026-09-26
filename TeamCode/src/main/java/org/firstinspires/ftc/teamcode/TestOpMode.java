@@ -35,9 +35,8 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
-@TeleOp(name="android studio test", group="Iterative OpMode")
-public class TestOpMode extends OpMode
-{
+@TeleOp(name = "android studio test", group = "Iterative OpMode")
+public class TestOpMode extends OpMode {
     // Declare OpMode members.
     private final ElapsedTime runtime = new ElapsedTime();
     private DcMotor motor = null;
@@ -83,7 +82,7 @@ public class TestOpMode extends OpMode
         // POV Mode uses left stick to go forward, and right stick to turn.
         // - This uses basic math to combine motions and is easier to drive straight.
         double input = -gamepad1.left_stick_y;
-        power = Range.clip(input, -1.0, 1.0) ;
+        power = Range.clip(input, -1.0, 1.0);
 
         // Send calculated power to wheels
         motor.setPower(power);
